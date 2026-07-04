@@ -1,19 +1,16 @@
-RARE VAULT DROPS WEBSITE FILES
+RARE VAULT DROP SITE V2
 
-Open index.html to preview the site.
+Upload these extracted files to your GitHub repo:
+index.html
+style.css
+assets/rvd-machine.png
 
-Files included:
-- index.html
-- style.css
-- script.js
-- assets/rvd-machine.png
+Cloudflare Pages settings:
+Framework preset: None
+Build command: leave blank
+Build output directory: .
 
-To publish:
-1. Upload all files to any web host.
-2. Keep the file structure the same.
-3. Point your domain rarevaultdrops.com to the host.
-
-Easy hosting options:
-- Netlify: drag and drop this folder
-- Cloudflare Pages: upload from GitHub or direct upload
-- Framer/Webflow: use this as the visual/code guide
+This version uses:
+Rare Vault Drop
+www.rarevaultdrop.com
+RVD@rarevaultdrop.com
