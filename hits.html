@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" href="assets/favicon.png">
-<link rel="stylesheet" href="style.css?v=hits-mobile2">
+<link rel="stylesheet" href="style.css?v=hits-mobile3">
 <script defer src="script.js?v=hits1"></script>
 <script defer src="hits.js?v=hits4"></script>
 <title>RVD Hits | Rare Vault Drop</title>
@@ -55,8 +55,12 @@
       <option value="Chase Slab Drop">Chase Slab Drop</option>
     </select>
 
-    <label for="machine-id">Machine ID</label>
-    <input id="machine-id" name="machineId" type="text" maxlength="20" placeholder="Example: RVD-001" required autocomplete="off">
+    <label for="machine-id">Machine ID / Location</label>
+    <select id="machine-id" name="machineId" required>
+      <option value="">Select machine location</option>
+      <!-- Active RVD machine locations -->
+      <option value="RVD-001">RVD-001 — Ken’s Pizza — Iowa Park, TX</option>
+    </select>
 
     <label for="display-name">Name or Social Handle <span class="optional">(optional)</span></label>
     <input id="display-name" name="displayName" type="text" maxlength="50" placeholder="Example: @collectorname">
