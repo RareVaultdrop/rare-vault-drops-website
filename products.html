@@ -1,28 +1,69 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" href="assets/favicon.png">
 <link rel="stylesheet" href="style.css">
-<script defer src="script.js?v=20260718-2"></script><title>Products | Rare Vault Drop</title></head><body><div class="bg"></div><header class="nav">
+<script defer src="script.js?v=20260815-1"></script>
+<script defer src="store-data.js?v=20260815-1"></script>
+<script defer src="store.js?v=20260815-1"></script>
+<title>Shop | Rare Vault Drop</title>
+<meta name="description" content="Shop trading card packs, mystery drops, and collector accessories from Rare Vault Drop.">
+</head>
+<body>
+<div class="bg"></div>
+<header class="nav">
   <a class="brand logo-brand" href="index.html"><img src="assets/rvd-logo-transparent.png" alt="Rare Vault Drop logo"></a>
   <button class="menu" type="button" aria-label="Open navigation menu" aria-expanded="false">☰</button>
   <nav>
-    <a href="products.html">Products</a>
+    <a href="products.html" aria-current="page">Shop</a>
     <a href="locations.html">Find a Machine</a>
     <a href="mystery-packs.html">Mystery Packs</a>
     <a href="business.html">For Businesses</a>
     <a href="about.html">About</a>
     <a href="contact.html">Contact</a>
   </nav>
-</header><main><section class="page-hero reveal"><p class="eyebrow">Rare Vault Drop</p><h1>Products</h1><p class="lead">TCG packs, sports cards, mystery packs, and collector accessories.</p></section><section class="section reveal"><div class="grid four">
-<div class="card"><div class="product-name">Pokémon</div><p>Sealed booster packs and collector favorites.</p><span class="pill">TCG</span></div>
-<div class="card"><div class="product-name">One Piece</div><p>Popular sealed products for anime and TCG collectors.</p><span class="pill">TCG</span></div>
-<div class="card"><div class="product-name">Magic</div><p>MTG packs and collector products.</p><span class="pill">TCG</span></div>
-<div class="card"><div class="product-name">Yu-Gi-Oh!</div><p>Classic trading card game products.</p><span class="pill">TCG</span></div>
-<div class="card"><div class="product-name">Lorcana</div><p>Disney Lorcana packs and accessories.</p><span class="pill">TCG</span></div>
-<div class="card"><div class="product-name">Sports Cards</div><p>Sports card packs for collectors and fans.</p><span class="pill">Cards</span></div>
-<div class="card"><div class="product-name">Mystery Packs</div><p>Built for chase moments and repeat excitement.</p><span class="pill">RVD</span></div>
-<div class="card"><div class="product-name">Accessories</div><p>Sleeves, top loaders, deck boxes, and supplies.</p><span class="pill">Supplies</span></div>
-</div></section></main><footer>
+  <button class="cart-button" id="cart-button" type="button" aria-label="Open shopping cart">Cart <span id="cart-count" hidden>0</span></button>
+</header>
+
+<main>
+  <section class="page-hero store-hero reveal">
+    <p class="eyebrow">Rare Vault Drop Online Store</p>
+    <h1>Shop The Vault</h1>
+    <p class="lead">TCG packs, mystery drops, and collector supplies shipped directly to you.</p>
+  </section>
+
+  <section class="store-shell reveal">
+    <div id="store-message" class="store-message" role="status"></div>
+    <div class="store-toolbar">
+      <label class="store-search-wrap">
+        <span class="sr-only">Search products</span>
+        <input id="store-search" type="search" placeholder="Search the vault…" autocomplete="off">
+      </label>
+      <div id="store-filters" class="store-filters" aria-label="Product categories"></div>
+    </div>
+    <div id="store-grid" class="store-grid" aria-live="polite"></div>
+  </section>
+</main>
+
+<div class="cart-backdrop" id="cart-backdrop"></div>
+<aside class="cart-drawer" id="cart-drawer" aria-hidden="true" aria-label="Shopping cart">
+  <div class="cart-drawer-header">
+    <div><p class="eyebrow">Your Order</p><h2>Vault Cart</h2></div>
+    <button type="button" class="cart-close" id="cart-close" aria-label="Close shopping cart">×</button>
+  </div>
+  <div id="cart-items" class="cart-items"></div>
+  <div class="cart-summary">
+    <div><span>Subtotal</span><strong id="cart-subtotal">$0.00</strong></div>
+    <p id="shipping-note"></p>
+    <button type="button" id="checkout-button" class="store-checkout">Secure Checkout</button>
+    <p id="checkout-status" class="checkout-status" role="status"></p>
+    <small>Secure payment powered by Stripe Checkout.</small>
+  </div>
+</aside>
+
+<footer>
   <div class="footer-logo-box"><img src="assets/rvd-logo-transparent.png" alt="Rare Vault Drop logo"><p>Built for Collectors</p></div>
   <div>
     <p>Phone: 940-247-0749</p>
@@ -31,4 +72,6 @@
     <p>Instagram: @RareVaultDrop</p>
   </div>
   <p class="copy">© 2026 Rare Vault Drop LLC. All Rights Reserved.</p>
-</footer></body></html>
+</footer>
+</body>
+</html>
