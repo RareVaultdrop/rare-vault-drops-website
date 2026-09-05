@@ -459,3 +459,26 @@ body.cart-open{overflow:hidden}
   .admin-card-actions button{width:100%;min-width:0}
 }
 /* ===== END RVD HITS ADMIN ===== */
+
+
+/* ===== HITS ADMIN ENTRY LINK ===== */
+.hits-admin-entry{
+  margin-top:34px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:24px;
+  padding:22px 24px;
+  border:1px solid rgba(244,183,40,.35);
+  border-radius:16px;
+  background:linear-gradient(135deg,rgba(244,183,40,.08),rgba(155,39,255,.10));
+}
+.hits-admin-entry .eyebrow{margin:0 0 5px}
+.hits-admin-entry h3{margin:0 0 7px;font-size:24px;text-transform:uppercase}
+.hits-admin-entry p:not(.eyebrow){margin:0;color:#bbb;line-height:1.45}
+.hits-admin-link{flex:0 0 auto;white-space:nowrap}
+@media(max-width:700px){
+  .hits-admin-entry{align-items:stretch;flex-direction:column}
+  .hits-admin-link{width:100%}
+}
+/* ===== END HITS ADMIN ENTRY LINK ===== */
