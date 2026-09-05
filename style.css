@@ -540,3 +540,17 @@ html,body{max-width:100%;overflow-x:hidden}
   .hit-card img{max-height:380px}
 }
 /* ===== END RVD HITS MOBILE IMAGE / OVERFLOW FIX ===== */
+
+
+/* ===== SUBTLE FOOTER APPROVAL LINK ===== */
+.footer-approve{
+  color:#ddd;
+  text-decoration:none;
+  font:inherit;
+  font-weight:400;
+  letter-spacing:0;
+  text-transform:none;
+}
+.footer-approve:hover{color:#f4b728;text-decoration:underline}
+.footer-approve:focus-visible{outline:2px solid #f4b728;outline-offset:3px;border-radius:2px}
+/* ===== END SUBTLE FOOTER APPROVAL LINK ===== */
