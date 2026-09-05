@@ -554,3 +554,58 @@ html,body{max-width:100%;overflow-x:hidden}
 .footer-approve:hover{color:#f4b728;text-decoration:underline}
 .footer-approve:focus-visible{outline:2px solid #f4b728;outline-offset:3px;border-radius:2px}
 /* ===== END SUBTLE FOOTER APPROVAL LINK ===== */
+
+
+/* ===== RVD HIT ADMIN IMAGE / REVIEW CARD SIZE FIX ===== */
+.admin-main{overflow-x:hidden}
+.admin-dashboard{width:100%;max-width:1180px;margin-inline:auto}
+.admin-hit-list{width:100%;max-width:1100px;margin:0 auto;display:grid;gap:20px}
+.admin-hit-card{
+  width:100%;
+  max-width:1100px;
+  margin:0 auto;
+  display:grid!important;
+  grid-template-columns:minmax(240px,360px) minmax(0,1fr)!important;
+  align-items:stretch;
+  gap:22px;
+  overflow:hidden;
+}
+.admin-hit-photo{
+  width:100%!important;
+  max-width:360px!important;
+  height:360px!important;
+  min-height:0!important;
+  margin:0!important;
+  display:grid!important;
+  place-items:center!important;
+  overflow:hidden!important;
+  border-radius:14px;
+  background:#050006;
+}
+.admin-hit-photo img{
+  display:block!important;
+  width:100%!important;
+  height:100%!important;
+  max-width:100%!important;
+  max-height:100%!important;
+  object-fit:contain!important;
+  object-position:center!important;
+}
+.admin-hit-details{width:100%;min-width:0;overflow-wrap:anywhere}
+.admin-card-actions{display:flex!important;gap:12px;flex-wrap:wrap;margin-top:auto;padding-top:18px}
+.admin-card-actions button{min-width:150px;min-height:48px;width:auto!important}
+
+@media(max-width:760px){
+  .admin-dashboard{padding-left:5%!important;padding-right:5%!important}
+  .admin-hit-card{grid-template-columns:minmax(0,1fr)!important;padding:14px!important}
+  .admin-hit-photo{max-width:100%!important;height:min(82vw,380px)!important;margin-inline:auto!important}
+  .admin-card-actions{display:grid!important;grid-template-columns:1fr 1fr}
+  .admin-card-actions button{width:100%!important;min-width:0}
+}
+
+@media(max-width:430px){
+  .admin-hit-photo{height:min(88vw,340px)!important}
+  .admin-hit-details h3{font-size:22px}
+  .admin-card-actions{grid-template-columns:1fr!important}
+}
+/* ===== END RVD HIT ADMIN IMAGE / REVIEW CARD SIZE FIX ===== */
