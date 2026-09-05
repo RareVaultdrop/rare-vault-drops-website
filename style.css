@@ -482,3 +482,61 @@ body.cart-open{overflow:hidden}
   .hits-admin-link{width:100%}
 }
 /* ===== END HITS ADMIN ENTRY LINK ===== */
+
+/* ===== RVD HITS MOBILE IMAGE / OVERFLOW FIX ===== */
+html,body{max-width:100%;overflow-x:hidden}
+.hits-layout,.hits-layout>*{min-width:0;max-width:100%}
+.hit-upload-form,.hits-info-panel,.photo-picker,.photo-preview-wrap{min-width:0;max-width:100%;width:100%}
+.photo-picker{overflow:hidden}
+.photo-picker input[type="file"]{
+  display:block;
+  width:100%;
+  max-width:100%;
+  min-width:0;
+  overflow:hidden;
+  font-size:13px;
+}
+#photo-preview-wrap{
+  width:100%;
+  max-width:100%;
+  min-height:0;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:10px;
+}
+#photo-preview-wrap[hidden]{display:none!important}
+#photo-preview{
+  display:block!important;
+  width:auto!important;
+  max-width:100%!important;
+  height:auto!important;
+  max-height:360px!important;
+  object-fit:contain!important;
+  margin:0 auto;
+}
+.hits-gallery,.hit-card{min-width:0;max-width:100%}
+.hit-card img{
+  display:block;
+  width:100%!important;
+  max-width:100%!important;
+  height:auto!important;
+  aspect-ratio:1/1;
+  max-height:520px;
+  object-fit:cover;
+}
+@media(max-width:950px){
+  .hits-layout{grid-template-columns:minmax(0,1fr)!important;width:100%}
+  .hits-layout>*{width:100%}
+}
+@media(max-width:580px){
+  .hits-hero{padding:44px 5% 24px}
+  .hits-hero h1{font-size:42px}
+  .hits-layout{padding:24px 5%!important;gap:24px}
+  .hits-info-panel{padding-top:0}
+  .hit-upload-form{padding:16px!important;border-radius:16px}
+  .photo-picker{padding:10px}
+  #photo-preview{max-height:280px!important}
+  .hit-card img{max-height:380px}
+}
+/* ===== END RVD HITS MOBILE IMAGE / OVERFLOW FIX ===== */
