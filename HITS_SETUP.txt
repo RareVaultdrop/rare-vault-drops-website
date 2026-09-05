@@ -1,0 +1,42 @@
+RVD HITS PAGE SETUP
+===================
+
+WHAT WAS ADDED
+- hits.html: public RVD Hits upload + gallery page
+- hits.js: upload/gallery behavior
+- hits-worker.js: secure Cloudflare Worker API
+- style.css: RVD Hits styling
+- Navigation link added to every website page
+
+PUBLIC PAGE
+https://rarevaultdrop.com/hits.html
+
+HOW IT WORKS
+1. Customer scans the Hits QR code.
+2. Customer selects Big Hit, Vault Drop, or Chase Slab Drop.
+3. Customer enters the Machine ID and uploads a photo.
+4. The image is stored in Cloudflare R2 with status PENDING.
+5. Only APPROVED submissions appear in the public Hit Vault gallery.
+
+CLOUDFLARE SETUP
+1. In Cloudflare, create an R2 bucket called: rvd-hits
+2. Create a Worker and paste the contents of hits-worker.js.
+3. Add an R2 binding:
+   Binding name: HITS_BUCKET
+   Bucket: rvd-hits
+4. Add a Worker secret named: ADMIN_KEY
+   Use a strong private password/token. Never put this secret in GitHub.
+5. Give the Worker a custom domain:
+   hits-api.rarevaultdrop.com
+6. Deploy the Worker.
+
+APPROVING PHOTOS
+The Worker includes private admin endpoints so photos do not automatically appear publicly.
+You can later add an RVD admin approval page, or approve with an API client.
+
+IMPORTANT
+Do not remove moderation. Public anonymous image uploads should be reviewed before being shown on the site.
+
+QR TARGET
+Create customer-facing QR codes pointing to:
+https://rarevaultdrop.com/hits.html

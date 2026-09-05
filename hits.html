@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="assets/favicon.png">
+<link rel="stylesheet" href="style.css">
+<script defer src="script.js?v=hits1"></script>
+<script defer src="hits.js?v=hits1"></script>
+<title>RVD Hits | Rare Vault Drop</title>
+<meta name="description" content="Share your Rare Vault Drop pulls, Vault Drops, and Chase Slab Drops with the RVD collector community.">
+</head>
+<body>
+<div class="bg"></div>
+<header class="nav">
+  <a class="brand logo-brand" href="index.html"><img src="assets/rvd-logo-transparent.png" alt="Rare Vault Drop logo"></a>
+  <button class="menu" type="button" aria-label="Open navigation menu" aria-expanded="false">☰</button>
+  <nav>
+    <a href="products.html">Products</a>
+    <a href="hits.html" aria-current="page">RVD Hits</a>
+    <a href="locations.html">Find a Machine</a>
+    <a href="mystery-packs.html">Mystery Packs</a>
+    <a href="business.html">For Businesses</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+<main>
+<section class="page-hero hits-hero">
+  <p class="eyebrow">Show Us What You Pulled</p>
+  <h1>RVD <span>HITS</span></h1>
+  <p class="lead">Hit something big? Crack a Vault Drop or land a Chase Slab Drop? Upload your photo and share it with the RVD collector community.</p>
+</section>
+
+<section class="section hits-layout reveal">
+  <div class="hits-info-panel">
+    <p class="eyebrow">Share Your Hit</p>
+    <h2>POST YOUR PULL</h2>
+    <p class="lead">Use the form to send us your hit photo. Include the Machine ID so we know where the pull happened.</p>
+    <div class="hit-type-cards">
+      <div class="hit-type-card"><strong>🔥 BIG HIT</strong><span>Share a favorite pull from the machine.</span></div>
+      <div class="hit-type-card vault"><strong>⚡ VAULT DROP</strong><span>You cracked the vault and received a special drop.</span></div>
+      <div class="hit-type-card chase"><strong>🏆 CHASE SLAB DROP</strong><span>You found one of the randomly inserted chase slabs.</span></div>
+    </div>
+    <p class="hits-note">By submitting, you give Rare Vault Drop permission to display your photo on RareVaultDrop.com and RVD social media.</p>
+  </div>
+
+  <form id="hit-upload-form" class="hit-upload-form" enctype="multipart/form-data" novalidate>
+    <h3>Upload Your Hit</h3>
+    <label for="hit-type">What did you hit?</label>
+    <select id="hit-type" name="hitType" required>
+      <option value="">Select hit type</option>
+      <option value="Big Hit">Big Hit</option>
+      <option value="Vault Drop">Vault Drop</option>
+      <option value="Chase Slab Drop">Chase Slab Drop</option>
+    </select>
+
+    <label for="machine-id">Machine ID</label>
+    <input id="machine-id" name="machineId" type="text" maxlength="20" placeholder="Example: RVD-001" required autocomplete="off">
+
+    <label for="display-name">Name or Social Handle <span class="optional">(optional)</span></label>
+    <input id="display-name" name="displayName" type="text" maxlength="50" placeholder="Example: @collectorname">
+
+    <label for="hit-caption">Tell us about the hit <span class="optional">(optional)</span></label>
+    <textarea id="hit-caption" name="caption" maxlength="180" placeholder="What did you pull?"></textarea>
+
+    <label for="hit-photo">Photo of your hit</label>
+    <div class="photo-picker">
+      <input id="hit-photo" name="photo" type="file" accept="image/jpeg,image/png,image/webp" required>
+      <div id="photo-preview-wrap" class="photo-preview-wrap" hidden>
+        <img id="photo-preview" alt="Preview of selected hit photo">
+      </div>
+      <small>JPG, PNG, or WebP. Maximum 8 MB.</small>
+    </div>
+
+    <button id="hit-submit" type="submit">Submit My Hit</button>
+    <p id="hit-upload-status" class="form-status" aria-live="polite"></p>
+  </form>
+</section>
+
+<section class="section hits-gallery-section reveal">
+  <div class="gallery-heading">
+    <div>
+      <p class="eyebrow">Community Pulls</p>
+      <h2>THE HIT VAULT</h2>
+    </div>
+    <div class="gallery-filters" role="group" aria-label="Filter hit gallery">
+      <button type="button" class="hit-filter active" data-filter="all">All</button>
+      <button type="button" class="hit-filter" data-filter="Vault Drop">Vault Drops</button>
+      <button type="button" class="hit-filter" data-filter="Chase Slab Drop">Chase Slabs</button>
+    </div>
+  </div>
+  <div id="hits-gallery" class="hits-gallery" aria-live="polite">
+    <div class="gallery-empty">No community hits have been posted yet. Be the first to share yours.</div>
+  </div>
+</section>
+</main>
+<footer>
+  <div class="footer-logo-box"><img src="assets/rvd-logo-transparent.png" alt="Rare Vault Drop logo"><p>Built for Collectors</p></div>
+  <div>
+    <p>Email: support@rarevaultdrop.com</p>
+    <p>Website: www.RareVaultDrop.com</p>
+    <p>Instagram: @RareVaultDrop</p>
+  </div>
+  <p class="copy">© 2026 Rare Vault Drop LLC. All Rights Reserved.</p>
+</footer>
+</body>
+</html>
