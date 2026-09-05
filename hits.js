@@ -1,5 +1,5 @@
 (() => {
- const API_BASE='https://floral-recipe-85e9.cgunnels1234.workers.dev';
+  const API_BASE = 'https://floral-recipe-85e9.cgunnels1234.workers.dev';
   const form = document.querySelector('#hit-upload-form');
   const photoInput = document.querySelector('#hit-photo');
   const previewWrap = document.querySelector('#photo-preview-wrap');

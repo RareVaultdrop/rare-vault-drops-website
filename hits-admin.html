@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="assets/favicon.png">
+<link rel="stylesheet" href="style.css">
+<script defer src="hits-admin.js?v=admin1"></script>
+<title>RVD Hit Approval | Rare Vault Drop</title>
+<meta name="robots" content="noindex,nofollow">
+</head>
+<body>
+<div class="bg"></div>
+<main class="admin-main">
+  <section class="page-hero admin-hero">
+    <a class="admin-logo" href="index.html"><img src="assets/rvd-logo-transparent.png" alt="Rare Vault Drop"></a>
+    <p class="eyebrow">Private Review</p>
+    <h1>HIT <span>APPROVAL</span></h1>
+    <p class="lead">Review customer hit submissions before they appear in the public Hit Vault.</p>
+  </section>
+
+  <section class="section admin-auth-section">
+    <form id="admin-login-form" class="admin-login-form" autocomplete="off">
+      <label for="admin-key">Admin Key</label>
+      <div class="admin-key-row">
+        <input id="admin-key" type="password" placeholder="Enter RVD admin key" required autocomplete="off">
+        <button type="submit">Unlock Review Queue</button>
+      </div>
+      <p id="admin-status" class="form-status" aria-live="polite"></p>
+    </form>
+  </section>
+
+  <section id="admin-dashboard" class="section admin-dashboard" hidden>
+    <div class="admin-toolbar">
+      <div>
+        <p class="eyebrow">Submission Queue</p>
+        <h2>RVD HIT REVIEW</h2>
+      </div>
+      <div class="admin-actions">
+        <select id="admin-filter" aria-label="Filter submissions">
+          <option value="pending">Pending</option>
+          <option value="approved">Approved</option>
+          <option value="rejected">Rejected</option>
+          <option value="all">All</option>
+        </select>
+        <button id="admin-refresh" type="button">Refresh</button>
+        <button id="admin-lock" type="button" class="secondary-action">Lock</button>
+      </div>
+    </div>
+    <div id="admin-summary" class="admin-summary" aria-live="polite"></div>
+    <div id="admin-hit-list" class="admin-hit-list">
+      <div class="gallery-empty">Enter your admin key to load submissions.</div>
+    </div>
+  </section>
+</main>
+</body>
+</html>

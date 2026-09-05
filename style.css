@@ -409,3 +409,53 @@ body.cart-open{overflow:hidden}
 @media(max-width:950px){.hits-layout{grid-template-columns:1fr}.hits-gallery{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:580px){.hits-layout{padding-top:20px}.hit-upload-form{padding:18px}.hits-gallery{grid-template-columns:1fr}.gallery-heading{align-items:flex-start}.gallery-filters{width:100%}.hit-filter{flex:1 1 auto}}
 /* ===== END RVD HITS PAGE ===== */
+
+
+/* ===== RVD HITS ADMIN ===== */
+.admin-main{width:100%;max-width:1280px;margin:0 auto;padding-bottom:70px}
+.admin-hero{padding-bottom:24px}
+.admin-logo{display:inline-block;width:min(520px,85vw);margin-bottom:18px}
+.admin-logo img{width:100%;height:auto;display:block}
+.admin-auth-section{padding-top:24px;padding-bottom:24px}
+.admin-login-form{max-width:900px;margin:0 auto}
+.admin-key-row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:12px;align-items:center}
+.admin-key-row input{margin:0;min-height:52px}
+.admin-key-row button{width:auto;min-width:210px;min-height:52px}
+.admin-dashboard{padding-top:34px}
+.admin-toolbar{display:flex;align-items:flex-end;justify-content:space-between;gap:18px;flex-wrap:wrap;margin-bottom:18px}
+.admin-toolbar h2{margin:4px 0 0;font-size:clamp(30px,5vw,54px)}
+.admin-actions{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.admin-actions select{min-height:46px;border-radius:10px;border:1px solid rgba(155,39,255,.55);background:#09000e;color:#fff;padding:0 14px;font-weight:800}
+.admin-actions button{width:auto;min-height:46px;padding:0 18px}
+.secondary-action{background:transparent!important;border:1px solid rgba(255,255,255,.26)!important;box-shadow:none!important}
+.admin-summary{margin:8px 0 20px;color:#ddd;font-size:15px}
+.admin-summary strong{color:#f4b728}
+.admin-hit-list{display:grid;gap:18px}
+.admin-hit-card{display:grid;grid-template-columns:minmax(220px,330px) minmax(0,1fr);gap:22px;border:1px solid rgba(155,39,255,.42);background:linear-gradient(180deg,rgba(155,39,255,.13),rgba(0,0,0,.78));border-radius:18px;padding:16px;box-shadow:0 0 26px rgba(155,39,255,.15)}
+.admin-hit-photo{border-radius:13px;overflow:hidden;background:#08000d;min-height:250px;display:grid;place-items:center}
+.admin-hit-photo img{width:100%;height:100%;max-height:400px;object-fit:contain;display:block}
+.admin-hit-details{min-width:0;display:flex;flex-direction:column}
+.admin-hit-topline{display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap}
+.admin-hit-details h3{font-size:28px;margin:16px 0 10px;color:#fff}
+.admin-hit-details dl{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:0 0 12px}
+.admin-hit-details dl div{padding:12px;border-radius:10px;background:rgba(0,0,0,.35);border:1px solid rgba(255,255,255,.08)}
+.admin-hit-details dt{font-size:11px;text-transform:uppercase;letter-spacing:1.2px;color:#aaa;font-weight:800}
+.admin-hit-details dd{margin:5px 0 0;color:#f4b728;font-weight:900;word-break:break-word}
+.admin-hit-details p{color:#ddd;line-height:1.55;white-space:pre-wrap}
+.admin-card-actions{display:flex;gap:12px;margin-top:auto;padding-top:14px}
+.admin-card-actions button{width:auto;min-width:140px}
+.reject-action{background:#51111d!important;box-shadow:none!important;border:1px solid rgba(255,100,120,.5)!important}
+.admin-state{display:inline-flex;align-items:center;border-radius:999px;padding:7px 11px;text-transform:uppercase;font-size:11px;letter-spacing:1px;font-weight:900;border:1px solid rgba(255,255,255,.18);color:#ddd}
+.admin-state.pending{color:#f4b728;border-color:rgba(244,183,40,.45)}
+.admin-state.approved{color:#9cf7b4;border-color:rgba(120,245,150,.45)}
+.admin-state.rejected{color:#ff9ca8;border-color:rgba(255,120,140,.45)}
+@media(max-width:760px){
+  .admin-key-row{grid-template-columns:1fr}
+  .admin-key-row button{width:100%}
+  .admin-hit-card{grid-template-columns:1fr}
+  .admin-hit-photo{min-height:210px}
+  .admin-hit-details dl{grid-template-columns:1fr}
+  .admin-card-actions{display:grid;grid-template-columns:1fr 1fr}
+  .admin-card-actions button{width:100%;min-width:0}
+}
+/* ===== END RVD HITS ADMIN ===== */
