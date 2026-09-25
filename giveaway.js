@@ -8,8 +8,8 @@
     const now=new Date();
     if(now<start){
       const d=start-now, days=Math.floor(d/86400000), hrs=Math.floor(d/3600000)%24, mins=Math.floor(d/60000)%60, secs=Math.floor(d/1000)%60;
-      gate.className='giveaway-gate upcoming'; gateTitle.textContent='GIVEAWAY OPENS OCTOBER 1';
-      countdown.textContent=`Opens in ${days}d ${pad(hrs)}h ${pad(mins)}m ${pad(secs)}s • 2:00 PM CT`;
+      gate.className='giveaway-gate upcoming'; gateTitle.textContent='GIVEAWAY OPENS OCTOBER 1, 2026 • 2:00 PM CT';
+      countdown.textContent=`Opens in ${days}d ${pad(hrs)}h ${pad(mins)}m ${pad(secs)}s`;
       btn.disabled=true; btn.textContent='GIVEAWAY OPENS OCT 1';
     } else if(now>=end){
       gate.className='giveaway-gate closed'; gateTitle.textContent='ENTRIES ARE CLOSED';
