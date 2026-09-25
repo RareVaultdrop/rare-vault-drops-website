@@ -9,3 +9,5 @@
 .entry-card button:disabled{cursor:not-allowed;filter:grayscale(.5);opacity:.68;box-shadow:none}
 .legal-banner{box-shadow:0 0 45px #d7a52b22}.legal-banner h2{font-size:clamp(28px,4vw,42px)}
 @media(max-width:850px){.prize-stage img{transform:none}.giveaway-gate{margin-top:18px}.giveaway-dates:before{font-size:13px}}
+
+.giveaway-gate{margin:16px auto 0;text-align:center;font-weight:800;line-height:1.35}.giveaway-gate b,.giveaway-gate span{display:block}.giveaway-gate span{margin-top:5px;color:#f1d378;font-size:15px}.giveaway-gate.upcoming,.giveaway-gate.live,.giveaway-gate.closed{padding:8px 12px}
