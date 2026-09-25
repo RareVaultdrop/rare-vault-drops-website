@@ -46,13 +46,8 @@
 }
 
 
-/* Mobile button single-line fix */
-@media(max-width:580px){
-  .entry-card button{
-    font-size:16px;
-    line-height:1.15;
-    white-space:nowrap;
-    letter-spacing:.2px;
-    padding:14px 10px;
-  }
-}
+/* Prize poster artwork update */
+.prize-stage.poster-stage, .prize-stage{overflow:visible}
+.poster-prize-art{background:transparent!important;border-radius:20px!important;box-shadow:0 20px 45px rgba(0,0,0,.72),0 0 0 1px rgba(255,255,255,.06)!important;filter:drop-shadow(0 18px 30px rgba(0,0,0,.62))!important;width:min(100%,700px)!important;transform:none!important}
+.prize-stage .electric-ring{opacity:.45}
+@media(max-width:850px){.poster-prize-art{width:min(100%,560px)!important}}

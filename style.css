@@ -609,3 +609,15 @@ html,body{max-width:100%;overflow-x:hidden}
   .admin-card-actions{grid-template-columns:1fr!important}
 }
 /* ===== END RVD HIT ADMIN IMAGE / REVIEW CARD SIZE FIX ===== */
+
+
+/* Giveaway home page promo */
+.giveaway-home-promo{padding-top:24px}
+.giveaway-home-card{display:grid;grid-template-columns:minmax(320px,.92fr) minmax(320px,1.08fr);gap:30px;align-items:center;border:1px solid rgba(244,183,40,.38);border-radius:26px;padding:28px;background:linear-gradient(135deg,rgba(18,9,27,.98),rgba(9,5,15,.96));box-shadow:0 0 34px rgba(155,39,255,.22)}
+.giveaway-home-image{display:block;text-decoration:none}
+.giveaway-home-image img{display:block;width:100%;border-radius:18px;box-shadow:0 20px 45px rgba(0,0,0,.48),0 0 0 1px rgba(255,255,255,.05)}
+.giveaway-home-copy h2{margin:8px 0 18px}
+.giveaway-home-list{list-style:none;padding:0;margin:0 0 26px;display:grid;gap:10px}
+.giveaway-home-list li{padding:14px 16px;border:1px solid rgba(155,39,255,.38);border-radius:14px;background:linear-gradient(180deg,rgba(155,39,255,.12),rgba(0,0,0,.48))}
+.giveaway-home-list strong{color:#f4b728}
+@media(max-width:950px){.giveaway-home-card{grid-template-columns:1fr;padding:20px}}
