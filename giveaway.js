@@ -24,17 +24,18 @@
     }
   }
   refresh(); setInterval(refresh,1000);
-  f.addEventListener('submit',async e=>{
-    e.preventDefault(); const now=new Date();
-    if(now<start){status.textContent='Entries open October 1, 2026 at 2:00 PM CT.';return}
-    if(now>=end){status.textContent='Entries closed November 25, 2026 at 2:00 PM CT.';return}
-    if(localStorage.getItem('rvd30-entered')==='yes'){status.textContent='This device has already submitted an entry.';return}
+  f.addEventListener('submit',e=>{
+    const now=new Date();
+    if(now<start){e.preventDefault();status.textContent='Entries open October 1, 2026 at 2:00 PM CT.';return}
+    if(now>=end){e.preventDefault();status.textContent='Entries closed November 25, 2026 at 2:00 PM CT.';return}
+    if(localStorage.getItem('rvd30-entered')==='yes'){e.preventDefault();status.textContent='This device has already submitted an entry.';return}
     const id='RVD30-'+crypto.randomUUID().slice(0,8).toUpperCase();
-    document.getElementById('entry-id').value=id; document.getElementById('entry-time').value=now.toISOString();
-    btn.disabled=true; btn.textContent='SUBMITTING...';
-    try{
-      const r=await fetch(f.action,{method:'POST',body:new FormData(f),headers:{Accept:'application/json'}}); if(!r.ok)throw 0;
-      localStorage.setItem('rvd30-entered','yes'); f.reset(); status.textContent=`YOU'RE IN! Entry ${id} has been received.`; btn.textContent='ENTRY RECEIVED';
-    }catch{status.textContent='We could not submit your entry. Please try again.';btn.disabled=false;btn.textContent='ENTER GIVEAWAY'}
+    document.getElementById('entry-id').value=id;
+    document.getElementById('entry-time').value=now.toISOString();
+    sessionStorage.setItem('rvd30-pending-id',id);
+    btn.disabled=true;
+    btn.textContent='SUBMITTING...';
+    status.textContent='Submitting your entry…';
+    // Standard form submission is intentional: FormSubmit autoresponse emails do not work with AJAX.
   });
 })();
