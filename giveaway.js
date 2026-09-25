@@ -2,7 +2,7 @@
   const f=document.getElementById('giveaway-form'); if(!f)return;
   const status=document.getElementById('giveaway-status'), btn=document.getElementById('enter-btn');
   const gate=document.getElementById('giveaway-gate'), gateTitle=document.getElementById('gate-title'), countdown=document.getElementById('gate-countdown');
-  const start=new Date('2026-10-01T14:00:00-05:00'), end=new Date('2026-10-31T14:00:00-05:00');
+  const start=new Date('2026-10-01T14:00:00-05:00'), end=new Date('2026-11-25T14:00:00-06:00');
   const pad=n=>String(n).padStart(2,'0');
   function refresh(){
     const now=new Date();
@@ -13,12 +13,12 @@
       btn.disabled=true; btn.textContent='GIVEAWAY OPENS OCT 1';
     } else if(now>=end){
       gate.className='giveaway-gate closed'; gateTitle.textContent='ENTRIES ARE CLOSED';
-      countdown.textContent='Winner announced October 31, 2026 at 6:00 PM CT';
+      countdown.textContent='Winner announced November 25, 2026 at 6:00 PM CT';
       btn.disabled=true; btn.textContent='ENTRIES CLOSED';
     } else {
       gate.className='giveaway-gate live'; gateTitle.textContent='ENTRIES ARE OPEN';
       const d=end-now, days=Math.floor(d/86400000), hrs=Math.floor(d/3600000)%24, mins=Math.floor(d/60000)%60;
-      countdown.textContent=`Free entry closes in ${days}d ${pad(hrs)}h ${pad(mins)}m • October 31 at 2:00 PM CT`;
+      countdown.textContent=`Free entry closes in ${days}d ${pad(hrs)}h ${pad(mins)}m • November 25 at 2:00 PM CT`;
       if(localStorage.getItem('rvd30-entered')==='yes'){btn.disabled=true;btn.textContent='ENTRY ALREADY RECEIVED';}
       else {btn.disabled=false;btn.textContent='ENTER GIVEAWAY';}
     }
@@ -27,7 +27,7 @@
   f.addEventListener('submit',async e=>{
     e.preventDefault(); const now=new Date();
     if(now<start){status.textContent='Entries open October 1, 2026 at 2:00 PM CT.';return}
-    if(now>=end){status.textContent='Entries closed October 31, 2026 at 2:00 PM CT.';return}
+    if(now>=end){status.textContent='Entries closed November 25, 2026 at 2:00 PM CT.';return}
     if(localStorage.getItem('rvd30-entered')==='yes'){status.textContent='This device has already submitted an entry.';return}
     const id='RVD30-'+crypto.randomUUID().slice(0,8).toUpperCase();
     document.getElementById('entry-id').value=id; document.getElementById('entry-time').value=now.toISOString();
