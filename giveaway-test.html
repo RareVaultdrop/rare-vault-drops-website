@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" href="assets/favicon.png">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="giveaway.css?v=20260924-nov25">
+<title>RVD Giveaway Email Test</title>
+</head>
+<body class="giveaway-page"><div class="bg"></div>
+<header class="nav"><a class="brand logo-brand" href="index.html"><img src="assets/rvd-logo-transparent.png" alt="Rare Vault Drop logo"></a></header>
+<main class="giveaway-shell">
+<section class="giveaway-hero" style="max-width:760px;margin:auto">
+<p class="eyebrow">Rare Vault Drop</p>
+<h1 style="font-size:clamp(36px,7vw,60px)">Giveaway<br><span>Email Test</span></h1>
+<p class="giveaway-lead">This page is for testing email delivery only. It does not create an official giveaway entry.</p>
+<div class="entry-card" style="max-width:620px;margin:30px auto 0">
+<h2>Send Test</h2>
+<p class="free-callout">TEST ONLY • NOT A REAL ENTRY</p>
+<form id="test-form" action="https://formsubmit.co/ajax/support@rarevaultdrop.com" method="POST">
+<input type="hidden" name="_subject" value="TEST - RVD 30TH GIVEAWAY ENTRY">
+<input type="hidden" name="_template" value="table">
+<input type="hidden" name="_captcha" value="false">
+<input type="hidden" name="promotion" value="TEST ONLY - RVD 30th Anniversary ETB Giveaway">
+<input type="hidden" name="entry_type" value="EMAIL DELIVERY TEST - DO NOT COUNT">
+<label for="t-name">Name *</label><input id="t-name" name="name" required value="RVD TEST ENTRY">
+<label for="t-email">Reply Email *</label><input id="t-email" name="email" type="email" required placeholder="your email">
+<button id="test-btn" type="submit">SEND TEST EMAIL</button>
+<p class="form-status" id="test-status" aria-live="polite"></p>
+</form>
+</div>
+</section>
+</main>
+<script>
+(()=>{
+ const f=document.getElementById('test-form'),b=document.getElementById('test-btn'),s=document.getElementById('test-status');
+ f.addEventListener('submit',async e=>{
+   e.preventDefault(); b.disabled=true; b.textContent='SENDING...';
+   try{
+     const r=await fetch(f.action,{method:'POST',body:new FormData(f),headers:{Accept:'application/json'}});
+     if(!r.ok) throw new Error();
+     s.textContent='TEST SENT. Check the RVD - 30th Giveaway folder in Yahoo.';
+     b.textContent='TEST SENT';
+   }catch(err){
+     s.textContent='The test did not send. If FormSubmit needs activation, check support@rarevaultdrop.com for an activation email.';
+     b.disabled=false; b.textContent='SEND TEST EMAIL';
+   }
+ });
+})();
+</script>
+</body></html>
